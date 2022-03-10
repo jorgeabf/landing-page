@@ -1,0 +1,347 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,400&family=Raleway&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #444;
+  background-color: #e6dff1;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%238465b7' fill-opacity='0.075'%3E%3Cpath fill-rule='evenodd' d='M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h2l-2 2V0zm0 4l4-4h2l-6 6V4zm0 4l8-8h2L40 10V8zm0 4L52 0h2L40 14v-2zm0 4L56 0h2L40 18v-2zm0 4L60 0h2L40 22v-2zm0 4L64 0h2L40 26v-2zm0 4L68 0h2L40 30v-2zm0 4L72 0h2L40 34v-2zm0 4L76 0h2L40 38v-2zm0 4L80 0v2L42 40h-2zm4 0L80 4v2L46 40h-2zm4 0L80 8v2L50 40h-2zm4 0l28-28v2L54 40h-2zm4 0l24-24v2L58 40h-2zm4 0l20-20v2L62 40h-2zm4 0l16-16v2L66 40h-2zm4 0l12-12v2L70 40h-2zm4 0l8-8v2l-6 6h-2zm4 0l4-4v2l-2 2h-2z'/%3E%3C/g%3E%3C/svg%3E");
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: #2f3640;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+  padding-bottom: 1rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+:root {
+  --color-boton: rgb(100, 45, 95);
+  --color-boton-hover: rgba(100, 45, 95, 0.85);
+  --color-claro: rgb(245, 235, 245);
+
+  --margen-secciones: 0 0 40px 0;
+  --padding-secciones: 3rem 2rem;
+
+  --border-radius: 4px;
+}
+
+.btn {
+  color: #fff;
+  background-color: #622c5f;
+  padding: 0.7rem 1rem;
+  border-radius: var(--border-radius);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 0.3s;
+  margin: 0 auto;
+  font-size: 0.8rem;
+  display: block;
+  text-align: center;
+  width: 120px;
+}
+
+.btn:hover {
+  background-color: rgba(98, 44, 95, 0.85);
+}
+
+/*---------- Menu Navegación ----------*/
+
+.menu-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: var(--color-boton);
+  cursor: pointer;
+  display: none;
+}
+
+.nav-main {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  height: 70px;
+  padding: 0 1rem;
+  background-color: var(--color-claro);
+  margin: var(--margen-secciones);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  font-size: 60px;
+  color: var(--color-boton);
+}
+
+.fa-search {
+  color: var(--color-boton);
+}
+
+.nav-menu {
+  display: flex;
+}
+
+.nav-menu li {
+  padding: 10px;
+}
+
+.nav-menu li a {
+  padding: 0.7rem;
+  color: var(--color-boton);
+  font-family: "Raleway", sans-serif;
+}
+
+.menu-activo,
+.nav-menu li a:hover {
+  background-color: var(--color-boton-hover);
+  border-radius: var(--border-radius);
+  color: var(--color-claro);
+}
+
+.nav-menu .menu-activo {
+  color: var(--color-claro);
+}
+
+.showcase {
+  width: 100%;
+  height: 550px;
+  background: url(img/pexels-banner.jpg) no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  margin: var(--margen-secciones);
+  padding: var(--padding-secciones);
+  border-radius: var(--border-radius);
+  text-align: left;
+  justify-content: flex-end;
+  justify-items: flex-end;
+}
+
+.showcase__textos {
+  width: 40%;
+  display: grid;
+  gap: 1rem;
+}
+
+.showcase__textos p {
+  font-style: italic;
+}
+
+.showcase__textos .btn {
+  text-align: center;
+  margin: 0;
+}
+
+/*---------- Noticias ----------*/
+
+.news-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  background-color: var(--color-claro);
+  margin: var(--margen-secciones);
+  padding: var(--padding-secciones);
+  border-radius: var(--border-radius);
+}
+
+.new-card {
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  padding-bottom: 1rem;
+}
+
+.new-card-textos {
+  padding: 1rem 1.5rem;
+}
+
+.news-cards h3 {
+  color: var(--color-boton);
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.news-cards img,
+.news-cards video {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* ---------- Cards Banner1 ---------- */
+.cards-banner-one {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 350px;
+  background: url(img/banner1.jpg) no-repeat center center/cover;
+  margin: var(--margen-secciones);
+  padding: var(--padding-secciones);
+  border-radius: var(--border-radius);
+}
+
+.content {
+  width: 70%;
+  color: #fff;
+  text-align: center;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: rgba(100, 45, 95, 0.65);
+  align-self: center;
+  border-radius: var(--border-radius);
+}
+
+/* ---------- Cards Banner2 ---------- */
+.cards-banner-two {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 350px;
+  background: url(img/banner2.jpg) no-repeat center center/cover;
+  margin: var(--margen-secciones);
+  padding: var(--padding-secciones);
+  border-radius: var(--border-radius);
+}
+
+/* ----------  Seccion Social ---------- */
+.social {
+  margin: var(--margen-secciones);
+  padding: var(--padding-secciones);
+}
+
+.social h3 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.links {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.social a:hover {
+  color: var(--color-boton-hover);
+}
+
+/* ----------  Footer links ---------- */
+
+.footer-links {
+  background-color: #2f3640;
+  color: #e6dff1;
+  padding: 2rem 1rem;
+}
+
+.footer-links h4 {
+  font-size: 14px;
+  color: #fff;
+}
+
+.footer-links a {
+  color: #e6dff1;
+  line-height: 1.7rem;
+  font-size: 12px;
+  display: block;
+  transition: all 0.4s;
+}
+
+.footer-links a:hover {
+  box-shadow: 0 0 1px 0 white;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+}
+
+.footer-links h3 {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+@media (max-width: 650px) {
+  .nav-menu {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50vw;
+    background-color: rgba(245, 235, 245, 0.9);
+    margin: 70px 0 0;
+    padding: 1rem 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-out;
+  }
+
+  .menuVisible {
+    transform: translateX(0);
+    transition: transform 0.3s ease-out;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-main ul.nav-menu a {
+    display: block;
+    width: 100%;
+  }
+
+  .news-cards {
+    grid-template-columns: 1fr;
+  }
+
+  :root {
+    --margen-secciones: 0 0 20px 0;
+    --padding-secciones: 2rem 1rem;
+  }
+
+  .content {
+    width: 95%;
+  }
+}
+
+@media (min-width: 650px) and (max-width: 1100px) {
+  .news-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
