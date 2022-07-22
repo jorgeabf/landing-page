@@ -1,3 +1,3 @@
-# Práctica de maqueta
+# Landing Page
 
-## HTML5, css y js para el menú móvil.
+## Práctica de maqueta con HTML, css y js para el menú móvil.
