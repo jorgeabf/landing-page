@@ -370,6 +370,12 @@ p {
     .content {
         width: 95%;
     }
+
+    h1 {
+        font-size: 3em;
+        max-width: 100%;
+        margin: 0;
+    }
 }
 
 @media (min-width: 650px) and (max-width: 1100px) {
